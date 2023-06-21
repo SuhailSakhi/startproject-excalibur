@@ -6,10 +6,10 @@ import { GameOverImage} from "./gamoverscreen.js";
 export class Gameover extends Scene {
 
     onInitialize(engine) {
-
+        const storedScores = JSON.parse(localStorage.getItem('scores'))
+        console.log(storedScores)
         const gameOverImage = new GameOverImage();
         this.add(gameOverImage);
-
 
         const gameOverText = new Label({
             text: 'You died! Click on the button below to go back to the start screen!',
@@ -22,15 +22,21 @@ export class Gameover extends Scene {
                 unit: FontUnit.Px
             })
         });
-        this.add(gameOverText);
 
-        // const backButton = new Actor({
-        //     this.add(backButton);
-        //
-        //     backButton.on('pointerup', () => {
-        //         location.reload();
-        //         // engine.goToScene('start'); // Stuur de gebruiker naar de startscene
-        //     });
-        // }
-    }
+        this.score =
+            this.mylabel = new Label({
+                text: `Score: ${storedScores}`,
+                pos: new Vector(350, 350),
+                font: new Font({
+                    family: 'impact',
+                    size: 100,
+                    unit: FontUnit.Px,
+                    color: Color.White,
+                })
+            })
+                 this.add(this.mylabel)
+
+        this.add(gameOverText);{
+        }
+}
 }

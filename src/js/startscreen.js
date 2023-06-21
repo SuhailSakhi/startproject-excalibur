@@ -7,19 +7,19 @@ export class Startscreen extends Actor {
     offset
 
     onInitialize(engine){
-        const spaceImage = Resources.Background2.toSprite()
-        this.offset = spaceImage.width
-        spaceImage.height = 730
-        spaceImage.width = 1500
+        const background2Image = Resources.Background2.toSprite()
+        this.offset = background2Image.width
+        background2Image.height = 730
+        background2Image.width = 1500
         const group = new GraphicsGroup({
             members: [
                 {
-                    graphic: spaceImage,
+                    graphic: background2Image,
                     pos: new Vector(0, 0),
                 },
                 {
-                    graphic: spaceImage,
-                    pos: new Vector(spaceImage.width, 0),
+                    graphic: background2Image,
+                    pos: new Vector(background2Image.width, 0),
                 }
             ]
         })

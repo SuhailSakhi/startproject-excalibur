@@ -14,7 +14,7 @@ export class Shark extends Enemy {
         console.log('Shark aangemaakt!')
 
         // this.on('collisionstart', (event) => this.hitSomething(event))
-        this.on("exitviewport", (event) => this.exit())
+        // this.on("exitviewport", (event) => this.exit())
     }
 
     //instance method

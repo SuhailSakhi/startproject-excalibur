@@ -26,5 +26,10 @@ export class Octopus extends Enemy {
         this.game = _engine;
 
     }
+    onPostUpdate(_engine, _delta) {
+        if (this.pos.x < 0) {
+            this.pos = new Vector(1500, Math.random() * 800)
+        }
+    }
 
 }
