@@ -9,7 +9,7 @@
 // import {Shark} from "./shark.js";
 //
 //
-// export class Game extends Engine {
+// export class Game extends Engine {mewff
 //     score
 //     mylabel
 //     Fish
